@@ -3,7 +3,7 @@ import React from "react";
 //create your first component
 function Card() {
 	return (
-		<div className="container-fluid mt-3">
+		<div className="container mt-3">
 			<div className="row">
 				<div className="col-sm-3 mb-3 mb-sm-0">
 					<div className="card">
@@ -16,8 +16,8 @@ function Card() {
 							<a href="#" className="btn btn-primary">Go somewhere</a>
 						</div>
 					</div>
-
 				</div>
+
 				<div className="col-sm-3 mb-3 mb-sm-0">
 					<div className="card">
 						<img src="https://picsum.photos/id/11/400/200" className="card-img-top img-fluid" alt="..." />
@@ -29,7 +29,6 @@ function Card() {
 							<a href="#" className="btn btn-primary">Go somewhere</a>
 						</div>
 					</div>
-
 				</div>
 
 				<div className="col-sm-3 mb-3 mb-sm-0">
