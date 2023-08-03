@@ -24,8 +24,8 @@ const Card = (props) => {
 Card.propTypes = {
 	title: PropTypes.string,
 	image: PropTypes.string,
-	buttonlabel: PropTypes.string,
-	buttonurl: PropTypes.string,
+	buttonLabel: PropTypes.string,
+	buttonUrl: PropTypes.string,
 	description: PropTypes.string,
 }
 
