@@ -6,18 +6,30 @@ import Footer from "./footer.jsx"
 
 //create your first component
 const Home = () => {
+
+	let navbar = "Start Bootstrap";
+	let home = "Home";
+	let about = "About";
+	let services = "Services";
+	let contact = "Contact";
+
 	let cardData = [
-		{ url: "https://picsum.photos/id/237/400/200", title: "Title 1", buttonLabel: "label 1", buttonUrl: "", description: "Description 1" },
-		{ url: "https://picsum.photos/id/11/400/200", title: "Title 2", buttonLabel: "label 2", buttonUrl: "", description: "Description 2" },
-		{ url: "https://picsum.photos/id/28/400/200", title: "Title 3", buttonLabel: "label 3", buttonUrl: "", description: "Description 3" },
-		{ url: "https://picsum.photos/id/280/400/200", title: "Title 4", buttonLabel: "label 4", buttonUrl: "", description: "Description 4" }
+		{ url: "https://picsum.photos/id/237/400/200", title: "Card title", buttonLabel: "Find Out More!", buttonUrl: "", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." },
+		{ url: "https://picsum.photos/id/11/400/200", title: "Card title", buttonLabel: "Find Out More!", buttonUrl: "", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." },
+		{ url: "https://picsum.photos/id/28/400/200", title: "Card title", buttonLabel: "Find Out More!", buttonUrl: "", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." },
+		{ url: "https://picsum.photos/id/280/400/200", title: "Card title", buttonLabel: "Find Out More!", buttonUrl: "", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." }
 	]
 	let containerData = [
-		{ title: "Title 1", description: "Description 1", buttonLabel: "Label 1" }
+		{ title: "A Warm Welcome!", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...", buttonLabel: "Call to action!" }
+	]
+
+	let footerData = [
+		{ description: "My Website with React and Props" }
 	]
 	return (
 		<>
-			<Navbar />
+			<Navbar navbar={navbar} home={home} about={about} services={services} contact={contact} />
+
 			{containerData.length > 0 &&
 				containerData.map((item, index) => {
 					return (
@@ -25,7 +37,6 @@ const Home = () => {
 					)
 				})
 			}
-
 
 			<div className="container mt-3">
 				<div className="row">
@@ -38,7 +49,15 @@ const Home = () => {
 					}
 				</div>
 			</div>
-			<Footer />
+
+			{footerData.length > 0 &&
+				footerData.map((item, index) => {
+					return (
+						<Footer key={index} description={item.description} />
+					)
+				})
+			}
+
 		</>
 	);
 };
